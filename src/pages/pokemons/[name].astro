@@ -63,12 +63,9 @@ const title = `PokeApi - #${id} ${name}`;
 </MainLayout>
 
 <script>
-  interface FavoritePokemon {
-    name: string;
-    id: number;
-  }
+  import type { FavoritePokemonsInterface } from "@interfaces/favorite-pokemons-interface";
 
-  let favoritePokemons: FavoritePokemon[] = JSON.parse(
+  let favoritePokemons: FavoritePokemonsInterface[] = JSON.parse(
     localStorage.getItem("favoritePokemons") ?? "[]"
   );
 

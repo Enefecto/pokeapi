@@ -26,7 +26,7 @@ export const FavoritePokemonCard: Component<Props> = ({pokemon}) => {
 
             <div class="flex flex-col justify-center items-center gap-4 mt-4">
                 <a href={`/pokemons/${pokemon.name}`} class="flex  flex-col justify-center items-center">
-                    <img src={pokemonImg} alt={`Imagen de ${pokemon.name}`} />
+                    <img src={pokemonImg} alt={`Imagen de ${pokemon.name}`} style={`view-transition-name: ${pokemon.name}-image`} />
                     <h1 class="capitalize">{pokemon.name} - #{pokemon.id}</h1>
                 </a>
                 <button onClick={deleteFavorite} class="text-red-400 font-bold">Borrar</button>
